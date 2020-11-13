@@ -1,0 +1,57 @@
+<html>
+
+<head>
+
+<title>Validation of user's details</title>
+
+</head>
+
+<body>
+
+<script>
+
+var today = new Date();
+
+var dob = new Date(prompt("What is your birth-date? Please provide birthdate in 'yyyy-mm-dd' format."));
+
+function age(birthDate, todayDate)
+
+{
+
+  var todayYear = todayDate.getFullYear();
+
+  var birthYear = birthDate.getFullYear();
+
+  var diff = todayYear - birthYear;
+
+  if(diff >= 14 && diff <= 24)
+
+  {
+
+  alert("Awesome, you are eligible!!!");
+
+  document.write("Because your age is "+diff+" years.");
+
+  }
+
+  else
+
+  {
+
+  alert("Sorry, you are ineligible!!!");
+
+  document.write("Because your age "+diff+" years.");
+
+  }
+
+  return diff;
+
+}
+
+age(dob, today);
+
+</script>
+
+</body>
+
+</html>
