@@ -1,0 +1,49 @@
+<html>
+
+<head>
+
+<title>Remove duplicates items from an array</title>
+
+</head>
+
+<body>
+
+<script>
+
+function Remove(arr)
+
+{
+
+ var n=arr.length;
+
+  var newA= [], i;
+
+  for(i=0; i < n; i++)
+
+  {
+
+  if(newA.indexOf(arr[i]) === -1)  
+
+  {
+
+    newA.push(arr[i]);
+
+  }
+
+  }
+
+  return newA;
+
+}
+
+var  v = [5,4,3,2,4,3,1,7,8,3,5,6,9,0,2];
+
+var  op = Remove(v);
+
+document.write(op); 
+
+</script>
+
+</body>
+
+</html>
