@@ -1,0 +1,67 @@
+<html>
+
+<head>
+
+<title>Merge Sort</title>
+
+</head>
+
+<body>
+
+<script>
+
+function mergeSort(array, m=(array.length/2))
+
+{
+
+  if(array.length < 2)
+
+  {
+
+    return array;
+
+  }
+
+  const f = array.splice(0,m); 
+
+  return merge(mergeSort(f),mergeSort(array));
+
+}
+
+function merge(f,l)
+
+{
+
+  const arr = [];
+
+  while(f.length && l.length)
+
+  {
+
+    if(f[0] < l[0])
+
+	{      arr.push(f.shift());
+
+    }
+
+	else
+
+	{
+
+      arr.push(l.shift());
+
+    }
+
+  }
+
+  return [...arr,...f,...l];
+
+}
+
+document.write(mergeSort([34,7,23,32,5,62]));
+
+</script>
+
+</body>
+
+</html>
